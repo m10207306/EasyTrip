@@ -24,6 +24,33 @@
    2. TortoiseGit 安裝: https://tortoisegit.org/download/
       1. 金鑰設定: https://blog.csdn.net/weixin_44299027/article/details/121178817
 
+
+# MacOS 環境建置
+1. brew update出錯: fatal: couldn't find remote ref refs/heads/master  
+   ```
+   brew tap --repair
+   brew cleanup
+   brew update-reset
+   ```
+
+2. 安裝 pyenv:
+   ```
+   brew install pyenv
+   export PYENV_ROOT="$HOME/.pyenv"
+   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+   eval "$(pyenv init -)"
+   ```
+
+3. 安裝 python:  
+   ```
+   pyenv install 3.11.6
+   ```
+
+4. 安裝 pyenv-virtualenv:  
+   ```
+   git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+   ```
+
 # GCP 遠端連線設定
 1. 於 GCP 建立 Compute Engine
 2. 於主機安裝 gcloud CLI: https://cloud.google.com/sdk/docs/install?hl=zh-cn
