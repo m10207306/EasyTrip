@@ -1,4 +1,6 @@
 # EasyTrip
+
+# 環境佈置
 1. Windows環境布置
    1. pyenv
       1. 用途: 安裝與管理python版本
@@ -22,4 +24,21 @@
       1. Git 安裝: https://gitforwindows.org/
       2. TortoiseGit 安裝: https://tortoisegit.org/download/
          1. 金鑰設定: https://blog.csdn.net/weixin_44299027/article/details/121178817
+
+# GCP 遠端連線設定
+1. 於 GCP 建立 Compute Engine
+2. 於主機安裝 gcloud CLI: https://cloud.google.com/sdk/docs/install?hl=zh-cn
+3. 於 Terminal 輸入:  
+   gcloud compute ssh --project=[PROJECT_ID] --zone=[ZONE_ID] [USER_NAME]@[VM_NAME]  
+   此時會於本機建立連線金鑰  
+4. 於 VSCode 的 SSH config 設定以下:
+   Host [自定義連線名稱]
+    HostName [VM外部IP]
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/google_compute_engine
+    User [USER_NAME]
+5. 以 VSCode SSH Extensions 連線
+
+
 
