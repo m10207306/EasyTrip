@@ -1,0 +1,1 @@
+sudo /home/liang_ji_wei1/.pyenv/versions/3.11.6/envs/EasyTrip/bin/gunicorn --workers 3 --bind 0.0.0.0:80 app:app

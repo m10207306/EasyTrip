@@ -54,14 +54,14 @@
 # GCP 遠端連線設定
 1. 於 GCP 建立 Compute Engine
 2. 於主機安裝 gcloud CLI: https://cloud.google.com/sdk/docs/install?hl=zh-cn
-   Windows安裝路徑: C:\Users\User\AppData\Local\Google\Cloud SDK
+   1. Windows安裝路徑: C:\Users\User\AppData\Local\Google\Cloud SDK
 3. 於 Terminal 輸入:
    ```
    gcloud compute ssh --project=[PROJECT_ID] --zone=[ZONE_ID] [USER_NAME]@[VM_NAME]
    ```
    此時會於本機建立連線金鑰
-   MacOS金鑰路徑: /home/.ssh/google_compute_engine
-   Windows金鑰路徑: C:\Users\User\.ssh\google_compute_engine
+      1. MacOS金鑰路徑: /home/.ssh/google_compute_engine  
+      2. Windows金鑰路徑: C:\Users\User\.ssh\google_compute_engine
 4. 於 VSCode 的 SSH config 設定以下:
    ```
    Host [自定義連線名稱]
@@ -78,7 +78,7 @@
 1. 安裝 Ubuntu 相依套件: 
    ```
    sudo apt-get update
-   sudo apt-get install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+   sudo apt-get install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev net-tools
    ```
 
 2. pyenv & pyenv-virtualenv 自動安裝指令: 
